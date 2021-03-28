@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "zonecountinterface.h": "c",
+        "mapinterface.h": "c"
+    }
+}
