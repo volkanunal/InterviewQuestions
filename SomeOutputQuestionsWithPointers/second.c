@@ -1,0 +1,11 @@
+#include "stdint.h"
+#include "stdio.h"
+
+int main()
+{
+    uint8_t u8_val[12] = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12 };
+
+    uint32_t* u32_val = (uint32_t*)u8_val;
+
+    printf("\r\n u32_val[3] -> 0x%x", u32_val[2]);
+}
