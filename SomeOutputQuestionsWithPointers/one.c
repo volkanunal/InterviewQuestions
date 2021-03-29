@@ -3,13 +3,13 @@
 
 int main()
 {
-    uint32_t test[2] = {0x12349978, 0x87654321};
+    uint32_t u32_val[2] = {0x12349978, 0x87654321};
     
-    uint8_t* ptr = (uint8_t*)&test;
+    uint8_t* u8_val = (uint8_t*)&u32_val;
     
-    ptr++;
+    u8_val++;
     
-    printf("\r\n %x", *ptr);
+    printf("\r\n %x", *u8_val);
 
     return 0;
 }
