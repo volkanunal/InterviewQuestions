@@ -7,7 +7,4 @@ Just Example :
 
 Gives : 6
 
-https://en.wikipedia.org/wiki/Flood_fill
-
-
 
