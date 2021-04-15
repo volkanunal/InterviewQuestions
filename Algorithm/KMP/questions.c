@@ -96,13 +96,13 @@ char* search(const char* pattern, const char* text, const char* table_array, int
 
 int main(int argc, char** argv)
 {
-    char* text = "bbbbbbbb";
+    char* text = "babababb";
     char* pattern = "ba";   
     char* pattern_second = "bb";
 
     char* table_array = (char*) malloc(strlen(pattern) * sizeof(char));
 
-    memset(table_array, 0, sizeof(table_array));
+    memset(table_array, 0, sizeof(char) * strlen(pattern));
 
     if (prepare_look_up_table(table_array, pattern) == 1)
     {
