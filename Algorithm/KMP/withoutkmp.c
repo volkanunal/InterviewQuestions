@@ -5,8 +5,8 @@
 int main()
 {
     int ret  = 0;
-    
-    char* text = "bbabaa";
+
+    char* text = "bbbabababa";
    
     char* temp_array = (char*)malloc(sizeof(char) * strlen(text));
 
@@ -39,7 +39,7 @@ int main()
 
     for (int i = 0; i < strlen(text); ++i)
     {       
-        if (temp_array[i + 1] == 0 && temp_array[i] == 1)
+        if (temp_array[i + 1] == 0 && temp_array[i] == 1 && !is_any_a_flag) //bb is exist before aa or ba
         {
             ret += 2;
             i++;

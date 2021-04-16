@@ -67,7 +67,6 @@ char* search(const char* pattern, const char* text, const char* table_array, int
         if (j == strlen_pattern)
         {
             printf("\r\n Found pattern at index %d", i - j);    
-
             
             ret_idx_array[i - j] = bb_or_ba ? 1 : 2;
 
@@ -96,7 +95,7 @@ char* search(const char* pattern, const char* text, const char* table_array, int
 
 int main(int argc, char** argv)
 {
-    char* text = "babababb";
+    char* text = "bbbabababa";
     char* pattern = "ba";   
     char* pattern_second = "bb";
 
@@ -124,7 +123,7 @@ int main(int argc, char** argv)
 
         for (int i = 0; i < strlen(text); ++i)
         {       
-            if (merge_array[i + 1] == 0 && merge_array[i] == 1)
+            if (merge_array[i + 1] == 0 && merge_array[i] == 1 && !is_any_a_flag)
             {
                 ret += 2;
                 i++;
