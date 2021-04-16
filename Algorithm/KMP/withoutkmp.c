@@ -6,7 +6,7 @@ int main()
 {
     int ret  = 0;
 
-    char* text = "bbbabababa";
+    char* text = "bbbababbbbabbbabbbb";
    
     char* temp_array = (char*)malloc(sizeof(char) * strlen(text));
 
@@ -49,14 +49,14 @@ int main()
         {
             ret += 2;
             i++;
-            is_any_a_flag = 1;
+            is_any_a_flag = is_any_a_flag ? 0 : 1;
         }
 
-        else if (temp_array[i] == 2 && temp_array[i + 1] == 0)
+        else if (temp_array[i] == 2 && temp_array[i + 1] == 0) //for aa
         {
             ret++;
             i++;
-            is_any_a_flag = 1;
+            is_any_a_flag = is_any_a_flag ? 0 : 1;
         }         
 
     }

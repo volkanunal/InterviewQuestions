@@ -133,14 +133,14 @@ int main(int argc, char** argv)
             {
                 ret += 2;
                 i++;
-                is_any_a_flag = 1;
+                is_any_a_flag = is_any_a_flag ? 0 : 1;
             }
 
             else if (merge_array[i] == 2 && merge_array[i + 1] == 0)
             {
                 ret++;
                 i++;
-                is_any_a_flag = 1;
+                is_any_a_flag = is_any_a_flag ? 0 : 1;
             }         
     
         }
